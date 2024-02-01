@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="to-do-list">
+        <div class="menu-div">
+          <h3 class="menu-heading">Menu</h3>
+          <div class="menu-tasks">
+            <span id="menu-task">TASKS</span>
+            <div id="today" class="menu-active">
+              <img src="list.png" height="10px" width="10px" />
+              &nbsp;&nbsp;Today
+            </div>
+            <div id="scheduled">
+              <img src="right.png" height="13px" width="13px" />
+              &nbsp;&nbsp;Scheduled
+            </div>
+          </div>
+        </div>
+        <div class="content-div">
+          <h2 class="list-heading">Today</h2>
+          <div class="add-task">
+            <img src="plus-icon.png" />
+            <input
+              type="text"
+              name=""
+              placeholder="Add New Task"
+              id="task-input"
+              class="task-input"
+            />
+            <button onclick="addTask()" id="task-button">Add</button>
+          </div>
+          <div class="list">
+            <ul id="task-list"></ul>
+          </div>
+
+          <div id="scheduled-content"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+.main-div {
+  background-color: #d2e0fb;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.to-do-list {
+  height: 80%;
+  width: 70%;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.menu-div {
+  height: 93%;
+  width: 260px;
+  background-color: #9bc3ff;
+  position: absolute;
+  border-radius: 20px;
+  left: 20px;
+  padding-left: 20px;
+}
+#menu-task {
+  font-size: 12px;
+  font-weight: bolder;
+}
+.menu-active {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  background-color: #719ef7;
+}
+.content-div {
+  height: 93%;
+  width: 750px;
+  position: absolute;
+  left: 300px;
+  border-radius: 20px;
+  position: relative;
+}
+.list-heading {
+  margin: 20px;
+  font-size: 30px;
+}
+.add-task {
+  /*	height: 45px;*/
+  width: 95%;
+  position: absolute;
+  left: 20px;
+  border-radius: 15px;
+  display: flex;
+  border: 2px solid lightgrey;
+  align-items: center;
+  padding-left: 7px;
+}
+
+.add-task input {
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 84%;
+}
+.add-task button {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  position: absolute;
+  right: 0px;
+  background-color: #719ef7;
+  height: 100%;
+  width: 80px;
+  font-weight: bolder;
+  cursor: pointer;
+  z-index: -1;
+}
+#task-button.task-button {
+  z-index: 1;
+}
+.add-task img {
+  height: 20px;
+  width: 20px;
+}
+.list ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 30px;
+  /*	background-color: lightgrey;*/
+  height: 45px;
+  width: 660px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid lightgrey;
+  /*	border-bottom: 2px solid lightgrey;*/
+}
+.list {
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 135px;
+}
+.list ul li::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-image: url("hollow-circle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  cursor: pointer;
+}
+.list ul li.checked {
+  text-decoration: line-through;
+  color: darkgrey;
+  position: relative;
+}
+.list ul li.checked::before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-image: url("checked-circle.png");
+  background-size: contain;
+  position: absolute;
+  top: 15px;
+  left: 3px;
+  background-repeat: no-repeat;
+}
+.span1 {
+  position: absolute;
+  right: 5px;
+  /*	background-color: darkgrey;*/
+  width: 25px;
+  height: 25px;
+  border-radius: 12px;
+  color: lightgrey;
+  font-weight: bolder;
+  text-align: center;
+}
+.span1:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+  color: black;
+}
+.span2:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+  color: #0592f0;
+}
+.span2 {
+  position: absolute;
+  right: 35px;
+  /*	background-color: darkgrey;*/
+  width: 25px;
+  height: 25px;
+  border-radius: 12px;
+  color: lightgrey;
+  font-weight: bolder;
+  text-align: center;
+}
+.span3:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+  color: red;
+}
+.span3 {
+  position: absolute;
+  right: 65px;
+  /*	background-color: darkgrey;*/
+  width: 25px;
+  height: 25px;
+  border-radius: 12px;
+  font-weight: bolder;
+  text-align: center;
+
+  color: transparent;
+  text-shadow: 0 0 0 lightgrey;
+}
+span.pinned {
+  color: red;
+  background-color: lightyellow;
+}
+.list ul li input {
+  position: absolute;
+  top: 7px;
+  left: 27px;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  /*	background-color: transparent;*/
+
+  outline: none;
+  width: 80%;
+}
+.menu-tasks {
+  height: 200px;
+  width: 90%;
+}
+.menu-tasks div {
+  height: 30px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+#today {
+  margin-top: 10px;
+  cursor: pointer;
+}
+#scheduled {
+  cursor: pointer;
+}
+
+#scheduled-content {
+  height: 450px;
+  width: 750px;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: aquamarine;
+}
+
+#scheduled-content div {
+  height: 200px;
+  width: 150px;
+  background-color: #71caf7;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+#scheduled-content div p {
+  margin-top: 5px;
+}
+.node-head {
+  font-weight: bolder;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  margin-bottom: 10px;
+}
+.menu-heading {
+}
